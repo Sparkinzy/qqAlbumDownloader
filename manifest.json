@@ -1,0 +1,46 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "小火龙下载",
+    "version": "1.4",
+    "author" : {
+           "name" : "牧",
+           "nick":"sparkinzy",
+           "birth" : 1989
+    },
+    "description": "小火龙下载，专业酱油辅助下载空间相册，更好地进行相册的线下管理 @牧",
+    "icons": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+    },
+    "permissions": [
+        "tabs",
+        "downloads",
+        "cookies", "storage", "http://*/*", "https://*/*"
+    ],
+    "content_scripts": [{
+        "matches": ["http://*.qq.com/*", "https://*.qq.com/*"],
+        "js": [
+            "libs/jquery.js",
+            "libs/FileSaver.min.js",
+            "libs/jszip.min.js",
+            "libs/jquery.cookie.js",
+            "libs/toastr.min.js",
+            "inject.js"
+        ],
+        "css": [
+            "libs/toastr.min.css",
+            "libs/progress.css"
+        ]
+    }],
+    "browser_action": {
+        "default_icon": {
+            "16": "icons/icon16.png",
+            "48": "icons/icon48.png"
+        },
+        "default_title": "小火龙下载",
+        "default_popup": "popup/popup.html"
+    }
+}

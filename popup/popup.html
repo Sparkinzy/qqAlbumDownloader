@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>QQ相册下载器</title>
+	<link href="http://cdn.bootcss.com/weui/0.4.3/style/weui.min.css" rel="stylesheet">
+	<link href="http://cdn.bootcss.com/jquery-weui/0.8.2/css/jquery-weui.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="./app.css">
+	<script src="../libs/jquery.js"></script>
+	<script type="text/javascript" src="../libs/list.min.js"></script>
+</head>
+<body>
+<div class="container">
+	<div class="weui_cells weui_cells_form">
+		<div class="weui_cell">
+		    <div class="weui_cell_hd"><label class="weui_label">QQ</label></div>
+		    <div class="weui_cell_bd weui_cell_primary">
+		      <input class="weui_input" type="number" id="qq" value="815537265" placeholder="请输入qq号">
+		    </div>
+		</div>
+		<button type="button" class="weui_btn weui_btn_primary getAlbum">获取相册信息</button>
+	</div>
+
+	<div class="result">
+	</div>
+	<div id="albums">
+		<div class="weui_cells weui_cells_form">
+			<div class="weui_cell">
+			    <div class="weui_cell_hd"><label class="weui_label">货号</label></div>
+			    <div class="weui_cell_bd weui_cell_primary">
+			      <input class="weui_input search" type="text" id="filter" value="" placeholder="请输入需要搜索的产品货号">
+			    </div>
+			</div>
+		</div>
+		<div class="weui_panel weui_panel_access">
+		  <div class="weui_panel_hd">相册列表</div>
+		  <ul class="weui_panel_bd albums-list list">
+		    <li class=" album-item" data-id="">
+		    	<div class="weui_media_box weui_media_appmsg">
+		    		<div class="weui_media_hd">
+		    		  <img class="weui_media_appmsg_thumb image" src="http://b262.photo.store.qq.com/psb?/V102UpOT2Jru98/nBkAMRPxwEC0x8ECe3Qkr6KsjfVEE*5mOxdq2Vw.R*8!/a/dAYBAAAAAAAA" alt="">
+		    		</div>
+		    		<div class="weui_media_bd">
+		    		  <h4 class="weui_media_title title">示例</h4>
+		    		  <p class="weui_media_desc desc"></p>
+		    		</div>
+		    		<div class="weui_media_bd" style="max-width:120px;">
+		    		  <button  type="button" class="weui_btn weui_btn_primary download-album">下载</button>
+		    		</div>
+		    	</div>
+				<div class="weui_progress">
+					<div class="weui_progress_bar">
+						<div class="weui_progress_inner_bar js_progress" style="width: 0%;"></div>
+					</div>
+				</div>
+		    </li>
+		  </ul>
+		</div>
+	</div>
+
+</div>
+	<div class="weui_extra_area">
+	    <div id="clock_div"></div>
+	  </div>
+<div class="hidden">
+<img id="utilImg" >
+<canvas id="utilCanvas" />
+</div>
+</body>
+
+ 
+<script type="text/javascript" src="./app.js"></script>
+</html>

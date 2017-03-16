@@ -1,0 +1,29 @@
+/**
+ * @Author:      sparkinzy
+ * @DateTime:    2016-12-13 14:00:13
+ * @Description: 辅助用户下载相册图片，增加线下管理
+ */
+*{
+	margin:0;
+	padding:0;
+}
+.container{
+	width:790px;
+	height:1000px;
+}
+.hidden{
+	display: none;
+	height:0;
+}
+.result{
+	text-align: center;
+	line-height: 1.5;
+	font-weight: 600;
+	color:red;
+	padding: 1.5rem 0;
+}
+.result:empty{
+	padding:0;
+}
+
+

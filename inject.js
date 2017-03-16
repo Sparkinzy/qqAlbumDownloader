@@ -265,6 +265,8 @@ var  juyuan_Callback = function(data)
 							// downloadAlbum(albumId,qq);
 							var rs = getPhotoList(albumId,qq),
 							album_name = rs.album_name,
+
+							album_name = qq+'.'+album_name;
 							photoList = rs.list;
 
 							toastr.options = {
